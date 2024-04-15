@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.InscriptionVue"
+             Title="InscriptionVue">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center">
+
+            <Entry x:Name="emailEntry" 
+                   Placeholder="Email" 
+
+                   WidthRequest="400" />
+            <Entry x:Name="nomEntry" 
+                   Placeholder="Nom"
+                   WidthRequest="400"/>
+            <Entry x:Name="prenomEntry" 
+                   Placeholder="Prénom"
+                   WidthRequest="400"/>
+            <Entry x:Name="passwordEntry" 
+                   Placeholder="Mot de passe"
+                   WidthRequest="400"/>
+            <Entry x:Name="telephoneEntry" 
+                   Placeholder="Téléphone"
+                   WidthRequest="400"/>
+            <DatePicker x:Name="dateNaissancePicker"
+                        WidthRequest="400"/>
+
+            <Button Text="Créer mon compte" 
+                    Clicked="OnInscriptionClicked"
+                    Padding=" 20, 10, 20, 10"
+                    WidthRequest="170"
+                    BackgroundColor="#089"
+            />
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
