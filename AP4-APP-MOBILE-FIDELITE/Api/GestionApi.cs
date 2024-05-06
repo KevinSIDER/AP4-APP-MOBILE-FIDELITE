@@ -26,7 +26,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed.
                 throw;
             }
         }
@@ -44,8 +43,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
             }
             catch (Exception ex)
             {
-                // Log exception details for debugging.
-                // Log.Error(ex, "Error occurred in PostDataAndGetIdAsync");
                 return null;
             }
         }
@@ -53,7 +50,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
         {
             if (!response.IsSuccessStatusCode)
             {
-                // Log or handle the response error as needed.
                 return null;
             }
 
@@ -72,7 +68,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    // Handle or log the error based on the response status
                     return default(T);
                 }
 
@@ -82,7 +77,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed.
                 return default(T);
             }
         }
@@ -101,7 +95,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    // Log or handle the response error as needed.
                     return null;
                 }
 
@@ -111,7 +104,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed.
                 return null;
             }
         }
@@ -129,7 +121,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    // Log or handle the response error as needed.
                     return default(T);
                 }
 
@@ -139,7 +130,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Api
             }
             catch (Exception ex)
             {
-                // Log or handle the exception as needed.
                 return default(T);
             }
         }

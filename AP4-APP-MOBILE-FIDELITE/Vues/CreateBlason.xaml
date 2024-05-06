@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateBlason"
+             Title="Créer un blason">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Entry x:Name="LeNomBlason" 
+                   Placeholder="Le nom du blason ?"
+                   WidthRequest="400"/>
+            
+            <Entry x:Name="LeMontantAchats" 
+                   Placeholder="Le montant des achats ?"
+                   WidthRequest="400"/>
+
+            <!-- Bouton pour créer le blason -->
+            
+            <Button Text="Créer un blason" 
+                    Clicked="OnCreateBlason"
+                    WidthRequest="150"
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

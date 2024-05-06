@@ -16,7 +16,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
 
         private async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            // 1. Validation des entrées utilisateur
             if (string.IsNullOrWhiteSpace(EmailEntry.Text) || string.IsNullOrWhiteSpace(PasswordEntry.Text))
             {
                 await DisplayAlert("Erreur", "Veuillez entrer votre email et votre mot de passe.", "OK");
@@ -32,8 +31,13 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
                 var response = await _apiServices.GetOneAsync("api/mobile/GetFindUser", userData);
                 if (response != null)
                 {
-                    await Navigation.PushAsync(new AccueilVue());
                     Constantes.CurrentUser = response;
+
+                    // Afficher le contenu de CurrentUser
+                    await DisplayAlert("Info", JsonConvert.SerializeObject(Constantes.CurrentUser), "OK");
+
+                    // Naviguer vers la page d'accueil
+                    await Navigation.PushAsync(new HomePage());
                 }
                 else
                 {
@@ -42,14 +46,13 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
             }
             catch (Exception ex)
             {
-                // 3. Gestion des erreurs de l'API
                 await DisplayAlert("Erreur", $"Une erreur s'est produite lors de la connexioner : {ex.Message}", "OK");
             }
         }
 
         private async void OnLabelTapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new InscriptionVue());
+            await Navigation.PushAsync(new InscriptionVue()); // Vous n'avez pas de compte ?
         }
     }
 }

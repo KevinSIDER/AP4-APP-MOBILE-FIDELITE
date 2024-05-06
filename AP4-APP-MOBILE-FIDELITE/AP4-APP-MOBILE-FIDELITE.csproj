@@ -62,31 +62,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Vues\InscriptionVue.xaml.cs">
-	    <DependentUpon>InscriptionVue.xaml</DependentUpon>
+	  <Compile Update="Vues\CreateBlason.xaml.cs">
+	    <DependentUpon>CreateBlason.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\AccueilVue.xaml.cs">
-	    <DependentUpon>AccueilVue.xaml</DependentUpon>
+	  <Compile Update="Vues\CreateReward.xaml.cs">
+	    <DependentUpon>CreateReward.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Vues\Registration.xaml.cs">
+	    <DependentUpon>Registration.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Vues\HomePage.xaml.cs">
+	    <DependentUpon>HomePage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Vues\Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\ProduitVue.xaml.cs">
-	    <DependentUpon>ProduitVue.xaml</DependentUpon>
+	  <Compile Update="Vues\CreateProduct.xaml.cs">
+	    <DependentUpon>CreateProduct.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Vues\GetAllBlason.xaml.cs">
+	    <DependentUpon>GetAllBlason.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Vues\InscriptionVue.xaml">
+	  <MauiXaml Update="Vues\CreateBlason.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\AccueilVue.xaml">
+	  <MauiXaml Update="Vues\CreateCategorie.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\CreateReward.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\Registration.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vues\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\ProduitVue.xaml">
+	  <MauiXaml Update="Vues\CreateProduct.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\GetAllBlason.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\UpdateUser.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

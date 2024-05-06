@@ -24,8 +24,6 @@ public partial class InscriptionVue : ContentPage
             userData.DateNaissance = dateNaissancePicker.Date;
         };
 
-        // Utilisez votre classe GestionApi pour envoyer ces donn�es � votre API
-
         var result = await _apiServices.GetOneAsync("api/mobile/setInscription", userData);
         if (result == null)
         {

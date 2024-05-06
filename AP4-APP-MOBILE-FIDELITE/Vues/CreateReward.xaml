@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateReward"
+             Title="Créer une récompense">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Entry x:Name="NomRecompense" 
+                   Placeholder="Le nom de la récompense ?"
+                   WidthRequest="400"/>
+
+            <Entry x:Name="PointsNecessaires" 
+        Placeholder="Nbr de points nécéssaires ?"
+        WidthRequest="400"/>
+
+            <Entry x:Name="LeProduit" 
+        Placeholder="Le produit associé ?"
+        WidthRequest="400"/>
+
+
+            <!-- Bouton pour créer une récompense-->
+
+            <Button Text="Créer une récompense" 
+                    Clicked="OnCreateReward"
+                    WidthRequest="200"
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

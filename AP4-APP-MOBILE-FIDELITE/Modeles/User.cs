@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AP4_APP_MOBILE_FIDELITE.Modeles
 {
@@ -65,12 +66,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Modeles
 
         [JsonProperty("stockPointFidelite")]
         public int PointFidelite { get => _stockPointFidelite; set => _stockPointFidelite = value; }
-
-        #endregion
-
-        #region Methodes
-
-        // Vous pouvez ajouter ici des méthodes spécifiques à l'utilisateur si nécessaire
 
         #endregion
     }

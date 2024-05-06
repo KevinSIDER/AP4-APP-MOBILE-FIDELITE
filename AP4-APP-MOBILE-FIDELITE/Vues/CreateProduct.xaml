@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateProduct"
+             Title="Créer un produit">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <!-- Entry pour le nom du produit -->
+            <Entry x:Name="NomProduitEntry" 
+                   Placeholder="Nom du produit"
+                   WidthRequest="400"/>
+            <!-- Entry pour le prix du produit -->
+            <Entry x:Name="PrixProduitEntry" 
+                   Placeholder="Prix du produit"
+                   WidthRequest="400"/>
+            <!-- Entry pour les points de fidélité -->
+            <Entry x:Name="PointsFideliteEntry" 
+                   Placeholder="Points de fidélité"
+                   WidthRequest="400" />
+       
+            <!-- Entry pour l'URL de l'image -->
+            <Entry x:Name="ImageUrlEntry" 
+                   Placeholder="URL de l'image"
+                   WidthRequest="400"/>
+
+            <!-- Bouton pour créer le produit -->
+            <Button Text="Créer un produit" 
+                    Clicked="OnCreateProduct"
+                    WidthRequest="150"
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

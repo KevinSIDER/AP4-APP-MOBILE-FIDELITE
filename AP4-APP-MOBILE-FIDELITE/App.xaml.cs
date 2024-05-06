@@ -8,6 +8,8 @@ namespace AP4_APP_MOBILE_FIDELITE
         {
             InitializeComponent();
 
+            // Page d'accueil de l'application
+
             MainPage = new NavigationPage(new Login());
 
         }

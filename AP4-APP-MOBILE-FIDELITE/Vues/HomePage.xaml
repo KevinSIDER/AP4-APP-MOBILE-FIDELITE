@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.HomePage"
+             Title="Accueil">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout
+            Grid.Column="0"
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center">
+            <Button Text="Créer un produit" 
+                    Clicked="GoCreateProduct"
+                    WidthRequest="200"
+                    BackgroundColor="#089" />
+            <Button Text="Modifier mon compte" 
+        Clicked="GoUpdateUser"
+        WidthRequest="200"
+        BackgroundColor="#089" />
+            <Button Text="Créer un blason" 
+                    Clicked="GoCreateBlason"
+                    WidthRequest="200"
+                    BackgroundColor="#089" />
+            <Button Text="Créer une catégorie" 
+                    Clicked="GoCreateCategorie"
+                    WidthRequest="200"
+                    BackgroundColor="#089" />
+            <Button Text="Créer une récompense" 
+                    Clicked="GoCreateReward"
+                    WidthRequest="200"
+                    BackgroundColor="#089" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+            Grid.Column="1"
+            Spacing="25"
+            Padding="30"
+            VerticalOptions="Center">
+            <Button Text="Afficher tout les blasons" 
+                    Clicked="ShowBlasons"
+                    WidthRequest="200"
+                    BackgroundColor="#089" />
+            <!-- Ajoutez d'autres boutons ici si nécessaire -->
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

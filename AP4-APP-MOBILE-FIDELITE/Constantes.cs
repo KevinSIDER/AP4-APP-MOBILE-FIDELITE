@@ -9,7 +9,7 @@ namespace AP4_APP_MOBILE_FIDELITE
 {
     public class Constantes
     {
-        public static string BaseApiAddress => "http://172.17.0.62:8082/";
-        public static User CurrentUser = null;
+        public static string BaseApiAddress => "http://172.17.0.62:8082/"; // Url de l'api
+        public static User CurrentUser = null; // Les données de l'utilisateur (id, nom, prénom...)
     }
 }
