@@ -1,44 +1,38 @@
-
-
 using System.Collections.ObjectModel;
 using AP4_APP_MOBILE_FIDELITE.Modeles;
 using AP4_APP_MOBILE_FIDELITE.Vues;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
-namespace AP4_APP_MOBILE_FIDELITE.Vues;
-
-public partial class HomePage : ContentPage
+namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public HomePage()
+    public partial class HomePage : ContentPage
     {
-        InitializeComponent();
-    }
+        public HomePage()
+        {
+            InitializeComponent();
+            AfficherInfos();  // Appel de ma méthode dès l'affichage
+        }
 
-    private async void GoCreateProduct(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new CreateProduct());
-    }
-    private async void GoCreateCategorie(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new CreateCategorie());
-    }
+        private void AfficherInfos()
+        {
+            string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
+            JObject currentUserJson = JObject.Parse(currentUserJsonString);
+            string nom = (string)currentUserJson["nom"];
+            string prenom = (string)currentUserJson["prenom"];
+            int ptnFidelite = (int)currentUserJson["stockPointFidelite"];
 
-    private async void GoUpdateUser(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new UpdateUser());
-    }
+            UserInfoLabel.Text = $" Bonjour {prenom} ,vous avez {ptnFidelite} points de pismafidelité !";
+        }
 
-    private async void GoCreateBlason(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new CreateBlason());
-    }
+        private async void goEditor(object sender, EventArgs e) // Créer des éléments dans la BDD
+        {
+            await Navigation.PushAsync(new Editor());
+        }
 
-    private async void ShowBlasons(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new GetAllBlason());
-    }
-
-    private async void GoCreateReward(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new CreateReward());
+        private async void ShowBlasons(object sender, EventArgs e) // Afficher tout les blasons
+        {
+            await Navigation.PushAsync(new GetAllBlason());
+        }
     }
 }
