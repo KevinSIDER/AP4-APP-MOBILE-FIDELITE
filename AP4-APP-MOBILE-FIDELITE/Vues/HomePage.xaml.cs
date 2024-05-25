@@ -34,5 +34,10 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             await Navigation.PushAsync(new GetAllBlason());
         }
+
+        private async void GoShowAllProduct(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ShowAllProduct());
+        }
     }
 }

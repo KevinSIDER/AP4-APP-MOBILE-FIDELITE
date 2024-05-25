@@ -13,6 +13,11 @@ public partial class Editor : ContentPage
         InitializeComponent();
     }
 
+    private async void GoCreateCommande(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CreateCommande());
+    }
+
     private async void GoCreateProduct(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CreateProduct());
@@ -20,11 +25,6 @@ public partial class Editor : ContentPage
     private async void GoCreateCategorie(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new CreateCategorie());
-    }
-
-    private async void GoUpdateUser(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new UpdateUser());
     }
 
     private async void GoCreateBlason(object sender, EventArgs e)

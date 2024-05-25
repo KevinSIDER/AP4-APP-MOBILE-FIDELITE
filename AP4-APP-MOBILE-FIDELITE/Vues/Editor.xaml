@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AP4_APP_MOBILE_FIDELITE.Vues.Editor"
-             Title="editor">
+             Title="PISMAFIDELITE - Mode éditeur">
 
     <VerticalStackLayout
             Grid.Column="0"
@@ -25,5 +25,9 @@
                     Clicked="GoCreateReward"
                     WidthRequest="200"
                     BackgroundColor="#089" />
+        <Button Text="Créer une commande" 
+            Clicked="GoCreateCommande"
+            WidthRequest="200"
+            BackgroundColor="#089" />
     </VerticalStackLayout>
 </ContentPage>
