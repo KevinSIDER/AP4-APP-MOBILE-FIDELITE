@@ -9,25 +9,20 @@
             VerticalOptions="Center">
 
             <Entry x:Name="NomRecompense" 
-                   Placeholder="Le nom de la récompense ?"
+                   Placeholder="Veuillez saisir le nom de votre récompense"
                    WidthRequest="400"/>
 
             <Entry x:Name="PointsNecessaires" 
-        Placeholder="Nbr de points nécéssaires ?"
-        WidthRequest="400"/>
+                   Placeholder="Combien de points de pismafidélité nécéssaire ?"
+                   WidthRequest="400"/>
 
             <Entry x:Name="LeProduit" 
-        Placeholder="Le produit associé ?"
-        WidthRequest="400"/>
-
-
-            <!-- Bouton pour créer une récompense-->
+                   Placeholder="Veuillez saisir l'identifiant du produit associé"
+                   WidthRequest="400"/>    
 
             <Button Text="Créer une récompense" 
                     Clicked="OnCreateReward"
-                    WidthRequest="200"
-            />
-
+                    WidthRequest="200"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

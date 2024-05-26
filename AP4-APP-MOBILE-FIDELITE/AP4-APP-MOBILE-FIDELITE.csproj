@@ -65,16 +65,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Vues\CreateBlason.xaml.cs">
+	  <Compile Update="Vues\Create\CreateBlason.xaml.cs">
 	    <DependentUpon>CreateBlason.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\CreateReward.xaml.cs">
+	  <Compile Update="Vues\Create\CreateReward.xaml.cs">
 	    <DependentUpon>CreateReward.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Vues\editor.xaml.cs">
 	    <DependentUpon>Editor.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\Registration.xaml.cs">
+	  <Compile Update="Vues\Create\Registration.xaml.cs">
 	    <DependentUpon>Registration.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Vues\HomePage.xaml.cs">
@@ -83,31 +83,37 @@
 	  <Compile Update="Vues\Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\CreateProduct.xaml.cs">
+	  <Compile Update="Vues\Create\CreateProduct.xaml.cs">
 	    <DependentUpon>CreateProduct.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Vues\GetAllBlason.xaml.cs">
+	  <Compile Update="Vues\GetAll\GetAllBlason.xaml.cs">
 	    <DependentUpon>GetAllBlason.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Vues\GetAll\GetAllProduits.xaml.cs">
+	    <DependentUpon>GetAllProduits.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Vues\CreateBlason.xaml">
+	  <MauiXaml Update="Vues\Create\CreateBlason.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\CreateCategorie.xaml">
+	  <MauiXaml Update="Vues\Create\CreateCategorie.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\CreateCommande.xaml">
+	  <MauiXaml Update="Vues\Create\CreateCommande.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\CreateReward.xaml">
+	  <MauiXaml Update="Vues\Create\CreateCommander.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\Create\CreateReward.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vues\Editor.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\Registration.xaml">
+	  <MauiXaml Update="Vues\Create\Registration.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vues\HomePage.xaml">
@@ -116,13 +122,16 @@
 	  <MauiXaml Update="Vues\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\CreateProduct.xaml">
+	  <MauiXaml Update="Vues\Create\CreateProduct.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\GetAllBlason.xaml">
+	  <MauiXaml Update="Vues\GetAll\GetAllBlason.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Vues\ShowAllProduct.xaml">
+	  <MauiXaml Update="Vues\GetAll\GetAllProduits.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\MonProfil.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

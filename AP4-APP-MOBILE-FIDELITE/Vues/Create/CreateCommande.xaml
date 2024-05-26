@@ -2,18 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateCommande"
-             Title="Créer une commande">
+             Title="PISMAFIDELITE - Créer une commande">
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             VerticalOptions="Center">
 
-            <!-- Bouton pour créer le produit -->
             <Button Text="Créer une commande" 
                     Clicked="OnCreateCommande"
-                    WidthRequest="150"
-            />
-
+                    WidthRequest="200"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

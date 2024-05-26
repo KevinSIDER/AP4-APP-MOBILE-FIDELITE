@@ -35,8 +35,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
 
                     // Afficher le contenu de CurrentUser
                     await DisplayAlert("Info", JsonConvert.SerializeObject(Constantes.CurrentUser), "OK");
-
-                    // Naviguer vers la page d'accueil
                     await Navigation.PushAsync(new HomePage());
                 }
                 else
@@ -46,7 +44,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Erreur", $"Une erreur s'est produite lors de la connexioner : {ex.Message}", "OK");
+                await DisplayAlert("Erreur", $"Une erreur s'est produite lors de la connexion : {ex.Message}", "OK");
             }
         }
 

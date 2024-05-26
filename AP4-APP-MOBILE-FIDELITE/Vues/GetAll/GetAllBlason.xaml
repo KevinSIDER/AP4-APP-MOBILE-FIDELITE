@@ -4,7 +4,7 @@
              Title="PISMAFIDELITE - Les Pismablasons">
 
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Button Text="Afficher tout les blasons"
+        <Button Text="Afficher tous les Pismablasons"
                 Clicked="Button_GetAllBlasons"/>
         <CollectionView x:Name="MalisteProduit">
             <CollectionView.ItemTemplate>
@@ -15,12 +15,14 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Text="Le blason " Grid.Column="0" VerticalOptions="Center"/>
-                            <Label Text="{Binding NomBlason}" Grid.Column="1" VerticalOptions="Center"/>
-                            <Label Text=" est obtenable avec un montant d'achat de " Grid.Column="2" VerticalOptions="Center"/>
+                            <Label Text="Le blason '" Grid.Column="0" VerticalOptions="Center"/>
+                            <Label Text="{Binding NomBlason} " Grid.Column="1" VerticalOptions="Center"/>
+                            <Label Text="' s'obtient avec un montant d'achats de minimum (" Grid.Column="2" VerticalOptions="Center"/>
                             <Label Text="{Binding MontantAchats}" Grid.Column="3" VerticalOptions="Center"/>
+                            <Label Text=") euros ! " Grid.Column="4" VerticalOptions="Center"/>
                         </Grid>
                     </Frame>
                 </DataTemplate>

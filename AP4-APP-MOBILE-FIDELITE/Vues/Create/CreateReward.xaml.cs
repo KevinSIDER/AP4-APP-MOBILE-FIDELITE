@@ -18,15 +18,9 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             Reward rewardData = new Reward();
 
-            // Convertir l'objet User en une chaîne JSON
             string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-
-            // Désérialiser la chaîne JSON en un objet JObject
             JObject currentUserJson = JObject.Parse(currentUserJsonString);
-
-            // Accéder à la propriété id dans l'objet JObject
             int id = (int)currentUserJson["id"];
-            // Utiliser l'ID de l'utilisateur actuel
 
             rewardData.ID = id;
             rewardData.NomRecompense = NomRecompense.Text;

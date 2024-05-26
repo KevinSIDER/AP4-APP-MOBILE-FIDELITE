@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateCommander"
+             Title="PISMAFIDELITE - Commander un produit">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Entry x:Name="LeProduitEntry" 
+                   Placeholder="Veuillez saisir l'identifiant du produit souhaité"
+                   WidthRequest="400"/>
+
+            <Entry x:Name="QuantiteEntry" 
+                   Placeholder="Veuillez saisir une quantité"
+                   WidthRequest="400"/>
+
+            <Entry x:Name="LaCommandeEntry" 
+                   Placeholder="A quel identifiant de commande associé cette commande ?"
+                   WidthRequest="400" />
+
+            <Button Text="Commander un produit" 
+                    Clicked="OnCreateCommander"
+                    WidthRequest="200"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -18,15 +18,9 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             Categorie categorieData = new Categorie();
 
-            // Convertir l'objet User en une chaîne JSON
             string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-
-            // Désérialiser la chaîne JSON en un objet JObject
             JObject currentUserJson = JObject.Parse(currentUserJsonString);
-
-            // Accéder à la propriété id dans l'objet JObject
             int id = (int)currentUserJson["id"];
-            // Utiliser l'ID de l'utilisateur actuel
 
             categorieData.ID = id;
             categorieData.nomCategorie = NomCategorieEntry.Text;

@@ -16,6 +16,7 @@ public partial class CreateCommande : ContentPage
     private async void OnCreateCommande(object sender, EventArgs e)
     {
         Commande commandeData = new Commande();
+
         string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
         JObject currentUserJson = JObject.Parse(currentUserJsonString);
         int id = (int)currentUserJson["id"];

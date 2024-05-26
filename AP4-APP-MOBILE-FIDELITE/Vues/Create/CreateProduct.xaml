@@ -2,36 +2,31 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateProduct"
-             Title="Créer un produit">
+             Title="PISMAFIDELITE - Créer un produit">
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             VerticalOptions="Center">
 
-            <!-- Entry pour le nom du produit -->
             <Entry x:Name="NomProduitEntry" 
-                   Placeholder="Nom du produit"
+                   Placeholder="Veuilez saisir un nom pour votre produit"
                    WidthRequest="400"/>
-            <!-- Entry pour le prix du produit -->
+
             <Entry x:Name="PrixProduitEntry" 
-                   Placeholder="Prix du produit"
+                   Placeholder="A quel prix souhaitez-vous vendre votre article ?"
                    WidthRequest="400"/>
-            <!-- Entry pour les points de fidélité -->
+
             <Entry x:Name="PointsFideliteEntry" 
-                   Placeholder="Points de fidélité"
+                   Placeholder="Combien de pisma points de fidélités va t-il rapporté ?"
                    WidthRequest="400" />
-       
-            <!-- Entry pour l'URL de l'image -->
+
             <Entry x:Name="ImageUrlEntry" 
-                   Placeholder="URL de l'image"
+                   Placeholder="Veuillez saisir l'url de l'image de votre produit"
                    WidthRequest="400"/>
 
-            <!-- Bouton pour créer le produit -->
-            <Button Text="Créer un produit" 
+            <Button Text="Créer mon produit" 
                     Clicked="OnCreateProduct"
-                    WidthRequest="150"
-            />
-
+                    WidthRequest="150"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,5 +1,3 @@
-
-
 using System.Collections.ObjectModel;
 using AP4_APP_MOBILE_FIDELITE.Modeles;
 using AP4_APP_MOBILE_FIDELITE.Vues;

@@ -11,10 +11,10 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         public HomePage()
         {
             InitializeComponent();
-            AfficherInfos();  // Appel de ma méthode dès l'affichage
+            ShowUserInfos();  // Appel de ma méthode dès l'affichage
         }
 
-        private void AfficherInfos()
+        private void ShowUserInfos()
         {
             string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
             JObject currentUserJson = JObject.Parse(currentUserJsonString);
@@ -25,19 +25,32 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
             UserInfoLabel.Text = $" Bonjour {prenom} ,vous avez {ptnFidelite} points de pismafidelité !";
         }
 
-        private async void goEditor(object sender, EventArgs e) // Créer des éléments dans la BDD
+        //Créer des éléments
+        private async void goEditor(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Editor());
         }
 
-        private async void ShowBlasons(object sender, EventArgs e) // Afficher tout les blasons
+        private async void GoCreateCommander(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CreateCommander());
+        }
+
+        //Afficher des éléments
+
+        private async void ShowBlasons(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GetAllBlason());
         }
 
         private async void GoShowAllProduct(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ShowAllProduct());
+            await Navigation.PushAsync(new GetAllProduits());
+        }
+
+        private async void GoShowMyProfil(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MonProfil());
         }
     }
 }

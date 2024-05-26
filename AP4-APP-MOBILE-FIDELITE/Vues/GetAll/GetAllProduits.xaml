@@ -1,10 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.ShowAllProduct"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.GetAllProduits"
              Title="PISMAFIDELITE - Les PismaProduits">
 
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Button Text="Afficher tout les produits"
+        <Button Text="Afficher tous les Pismaproduits"
                 Clicked="Button_GetAllProduits"/>
         <CollectionView x:Name="MesProduits">
             <CollectionView.ItemTemplate>
@@ -15,9 +15,12 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Label Text="{Binding nomProduit}" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label Text="{Binding NomProduit}" Grid.Column="0" VerticalOptions="Center"/>
+                            <Label Text=" - " Grid.Column="1" VerticalOptions="Center"/>
+                            <Label Text="{Binding PrixProduit}" Grid.Column="2" VerticalOptions="Center"/>
+                            <Label Text=" euros " Grid.Column="3" VerticalOptions="Center"/>
                         </Grid>
                     </Frame>
                 </DataTemplate>

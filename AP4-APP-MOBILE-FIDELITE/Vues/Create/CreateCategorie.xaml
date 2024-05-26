@@ -2,28 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AP4_APP_MOBILE_FIDELITE.Vues.CreateCategorie"
-             Title="Créer une catégorie">
+             Title="PISMAFIDELITE - Créer une catégorie">
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             VerticalOptions="Center">
 
             <Entry x:Name="NomCategorieEntry" 
-                   Placeholder="Le nom de la catégorie ?"
+                   Placeholder="Veuillez saisir un nom pour votre catégorie"
                    WidthRequest="400"/>
 
             <Entry x:Name="ImageUrlEntry" 
-                   Placeholder="Url de l'image ?"
+                   Placeholder="Veuillez saisir l'url de l'image de votre catégorie"
                    WidthRequest="400"/>
-
-
-            <!-- Bouton pour créer une récompense-->
 
             <Button Text="Créer une catégorie" 
                     Clicked="OnCreateCategorie"
-                    WidthRequest="200"
-            />
-
+                    WidthRequest="200"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
