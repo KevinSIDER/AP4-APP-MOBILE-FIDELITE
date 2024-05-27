@@ -52,5 +52,10 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             await Navigation.PushAsync(new MonProfil());
         }
+
+        private async void GoShowAllRewards(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GetAllRecompenses());
+        }
     }
 }

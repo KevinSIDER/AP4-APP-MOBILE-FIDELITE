@@ -22,12 +22,16 @@ public partial class MonProfil : ContentPage
         int telephone = (int)currentUserJson["telephone"];
         DateTime dateNaissance = (DateTime)currentUserJson["dateNaissance"];
 
-        // Format the user information in a structured table
         UserInfoLabel.Text = $"Nom : {nom}\n" +
                              $"Prénom : {prenom}\n" +
                              $"Email : {email}\n" +
                              $"Points de fidélité : {ptnFidelite}\n" +
                              $"Téléphone : {telephone}\n" +
                              $"Date de naissance : {dateNaissance:dd/MM/yyyy}";
+    }
+
+    private async void goShowCommandes(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new GetAllCommandes());
     }
 }

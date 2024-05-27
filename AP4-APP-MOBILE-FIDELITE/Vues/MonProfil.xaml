@@ -5,10 +5,15 @@
              Title="PISMAFIDELITE - Mon profil">
     <VerticalStackLayout>
         <Label x:Name="UserInfoLabel"
-           Text="Nom et Prénom"
-           FontSize="25"
-           TextColor="Black"
-           HorizontalOptions="Center"
-           VerticalOptions="Center" />
+               Text="Nom et Prénom"
+               FontSize="25"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Button Text="Mes commandes" 
+                Clicked="goShowCommandes"
+                WidthRequest="260"
+                BackgroundColor="#089" />
     </VerticalStackLayout>
 </ContentPage>

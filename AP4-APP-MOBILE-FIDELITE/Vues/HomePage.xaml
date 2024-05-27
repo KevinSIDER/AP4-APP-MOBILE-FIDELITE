@@ -55,6 +55,11 @@
                     WidthRequest="260"
                     BackgroundColor="#089" />
 
+            <Button Text="Voir les Pismarecompenses" 
+                    Clicked="GoShowAllRewards"
+                    WidthRequest="260"
+                    BackgroundColor="#089" />
+
             <Button Text="Commander un Pismaproduit" 
                     Clicked="GoCreateCommander"
                     WidthRequest="260"

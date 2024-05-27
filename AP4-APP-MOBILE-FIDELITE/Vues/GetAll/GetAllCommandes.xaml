@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.GetAllCommandes"
+             Title="PISMAFIDELITE - Vos commandes">
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Text="Afficher toutes vos commandes"
+                Clicked="Button_GetAllCommandes"/>
+        <CollectionView x:Name="MesCommandes">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Black" Padding="5" Margin="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Etat}" Grid.Column="0" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

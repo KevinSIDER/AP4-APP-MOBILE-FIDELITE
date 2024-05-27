@@ -21,9 +21,10 @@ public partial class CreateCommande : ContentPage
         JObject currentUserJson = JObject.Parse(currentUserJsonString);
         int id = (int)currentUserJson["id"];
         commandeData.ID = id;
+        commandeData.Etat = "En cours";
 
         var result = await _apiServices.GetOneAsync("api/mobile/creerCommande", commandeData);
-        if (result != null)
+        if (result == null)
         {
             await DisplayAlert("Erreur", "La commande n'a pas été créée", "OK");
         }
