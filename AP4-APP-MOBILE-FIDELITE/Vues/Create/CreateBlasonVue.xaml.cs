@@ -4,10 +4,10 @@ using AP4_APP_MOBILE_FIDELITE.Modeles;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues;
 
-public partial class CreateBlason : ContentPage
+public partial class CreateBlasonVue : ContentPage
 {
     private readonly GestionApi _apiServices = new GestionApi();
-    public CreateBlason()
+    public CreateBlasonVue()
     {
         InitializeComponent();
     }
@@ -19,7 +19,7 @@ public partial class CreateBlason : ContentPage
         blasonData.MontantAchats = int.Parse(LeMontantAchats.Text);
 
         var result = await _apiServices.GetOneAsync("api/blason/creerBlason", blasonData);
-        if (result != null)
+        if (result == null)
         {
             await DisplayAlert("Erreur", "Le blason n'a pas été créé", "OK");
         }

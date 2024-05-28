@@ -5,11 +5,11 @@ using Newtonsoft.Json;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public partial class CreateProduct : ContentPage
+    public partial class CreateProductVue : ContentPage
     {
         private readonly GestionApi _apiServices = new GestionApi();
 
-        public CreateProduct()
+        public CreateProductVue()
         {
             InitializeComponent();
         }

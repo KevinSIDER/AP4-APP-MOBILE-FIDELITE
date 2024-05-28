@@ -5,11 +5,11 @@ using AP4_APP_MOBILE_FIDELITE.Modeles;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public partial class Login : ContentPage
+    public partial class LoginVue : ContentPage
     {
         private readonly GestionApi _apiServices = new GestionApi();
 
-        public Login()
+        public LoginVue()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
 
                     // Afficher le contenu de CurrentUser
                     await DisplayAlert("Info", JsonConvert.SerializeObject(Constantes.CurrentUser), "OK");
-                    await Navigation.PushAsync(new HomePage());
+                    await Navigation.PushAsync(new HomePageVue());
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
 
         private async void OnLabelTapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new InscriptionVue()); // Vous n'avez pas de compte ?
+            await Navigation.PushAsync(new RegistrationVue()); // Vous n'avez pas de compte ?
         }
     }
 }

@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public partial class GetAllRecompenses : ContentPage
+    public partial class GetAllRecompensesVue : ContentPage
     {
         private readonly GestionApi _apiServices = new GestionApi();
         private ObservableCollection<Reward> result = new ObservableCollection<Reward>();
 
-        public GetAllRecompenses()
+        public GetAllRecompensesVue()
         {
             InitializeComponent();
         }

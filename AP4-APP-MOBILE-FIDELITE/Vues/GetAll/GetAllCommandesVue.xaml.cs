@@ -7,17 +7,17 @@ using Newtonsoft.Json;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public partial class GetAllProduits : ContentPage
+    public partial class GetAllCommandesVue : ContentPage
     {
         private readonly GestionApi _apiServices = new GestionApi();
-        private ObservableCollection<Product> result = new ObservableCollection<Product>();
+        private ObservableCollection<Commande> result = new ObservableCollection<Commande>();
 
-        public GetAllProduits()
+        public GetAllCommandesVue()
         {
             InitializeComponent();
         }
 
-        private async void Button_GetAllProduits(object sender, EventArgs e)
+        private async void Button_GetAllCommandes(object sender, EventArgs e)
         {
             try
             {
@@ -25,8 +25,8 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
                 JObject currentUserJson = JObject.Parse(currentUserJsonString);
                 int id = (int)currentUserJson["id"];
 
-                var result = await _apiServices.GetAllAsyncByID<Product>("api/mobile/GetAllProduits", "Id", id);
-                MesProduits.ItemsSource = result;
+                var result = await _apiServices.GetAllAsyncByID<Commande>("api/mobile/GetAllCommandes", "Id", id);
+                MesCommandes.ItemsSource = result;
             }
             catch (Exception ex)
             {

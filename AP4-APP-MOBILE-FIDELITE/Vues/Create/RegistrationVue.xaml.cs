@@ -3,11 +3,11 @@ using AP4_APP_MOBILE_FIDELITE.Modeles;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues;
 
-public partial class InscriptionVue : ContentPage
+public partial class RegistrationVue : ContentPage
 {
     private readonly GestionApi _apiServices = new GestionApi();
 
-    public InscriptionVue()
+    public RegistrationVue()
     {
         InitializeComponent();
     }
@@ -31,7 +31,7 @@ public partial class InscriptionVue : ContentPage
         }
         else
         {
-            await Navigation.PushAsync(new Login());
+            await Navigation.PushAsync(new LoginVue());
         }
     }
 }

@@ -1,6 +1,6 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.GetAllProduits"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.GetAllProduitsVue"
              Title="PISMAFIDELITE - Les PismaProduits">
 
     <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">

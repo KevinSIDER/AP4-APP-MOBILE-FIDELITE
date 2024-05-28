@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues;
 
-public partial class MonProfil : ContentPage
+public partial class MyAccountVue : ContentPage
 {
-    public MonProfil()
+    public MyAccountVue()
     {
         InitializeComponent();
         ShowMyProfil();
@@ -32,6 +32,6 @@ public partial class MonProfil : ContentPage
 
     private async void goShowCommandes(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new GetAllCommandes());
+        await Navigation.PushAsync(new GetAllCommandesVue());
     }
 }

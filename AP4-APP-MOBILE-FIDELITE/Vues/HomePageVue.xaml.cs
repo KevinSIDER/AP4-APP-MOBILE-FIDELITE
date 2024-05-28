@@ -6,9 +6,9 @@ using Newtonsoft.Json;
 
 namespace AP4_APP_MOBILE_FIDELITE.Vues
 {
-    public partial class HomePage : ContentPage
+    public partial class HomePageVue : ContentPage
     {
-        public HomePage()
+        public HomePageVue()
         {
             InitializeComponent();
             ShowUserInfos();  // Appel de ma méthode dès l'affichage
@@ -28,34 +28,34 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         //Créer des éléments
         private async void goEditor(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Editor());
+            await Navigation.PushAsync(new CreatorModeVue());
         }
 
         private async void GoCreateCommander(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CreateCommander());
+            await Navigation.PushAsync(new CreateCommanderVue());
         }
 
         //Afficher des éléments
 
         private async void ShowBlasons(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GetAllBlason());
+            await Navigation.PushAsync(new GetAllBlasonsVue());
         }
 
         private async void GoShowAllProduct(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GetAllProduits());
+            await Navigation.PushAsync(new GetAllProduitsVue());
         }
 
         private async void GoShowMyProfil(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MonProfil());
+            await Navigation.PushAsync(new MyAccountVue());
         }
 
         private async void GoShowAllRewards(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new GetAllRecompenses());
+            await Navigation.PushAsync(new GetAllRecompensesVue());
         }
 
     }

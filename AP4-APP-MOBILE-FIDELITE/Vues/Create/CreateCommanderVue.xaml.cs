@@ -4,11 +4,11 @@ using AP4_APP_MOBILE_FIDELITE.Modeles;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
-public partial class CreateCommander : ContentPage
+public partial class CreateCommanderVue : ContentPage
 {
 
     private readonly GestionApi _apiServices = new GestionApi();
-    public CreateCommander()
+    public CreateCommanderVue()
     {
         InitializeComponent();
     }
