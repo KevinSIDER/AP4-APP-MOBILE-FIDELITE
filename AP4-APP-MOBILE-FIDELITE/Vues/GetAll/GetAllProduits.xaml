@@ -16,11 +16,15 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Label Text="{Binding NomProduit}" Grid.Column="0" VerticalOptions="Center"/>
                             <Label Text=" - " Grid.Column="1" VerticalOptions="Center"/>
                             <Label Text="{Binding PrixProduit}" Grid.Column="2" VerticalOptions="Center"/>
-                            <Label Text=" euros " Grid.Column="3" VerticalOptions="Center"/>
+                            <Label Text=" euros - Rapporte (" Grid.Column="3" VerticalOptions="Center"/>
+                            <Label Text="{Binding PointsFidelite}" Grid.Column="4" VerticalOptions="Center"/>
+                            <Label Text=") points de pismafidelite " Grid.Column="5" VerticalOptions="Center"/>
                         </Grid>
                     </Frame>
                 </DataTemplate>

@@ -57,5 +57,6 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             await Navigation.PushAsync(new GetAllRecompenses());
         }
+
     }
 }

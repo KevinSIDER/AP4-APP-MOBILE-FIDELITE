@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP4_APP_MOBILE_FIDELITE.Vues.GetAllRecompenses"
+             Title="PISMAFIDELITE - Les PismaRecompenses">
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button x:Name="MonBouton" Text="Get All Recompenses" Clicked="Button_GetAllRecompenses" />
+
+        <CollectionView x:Name="MesRecompenses">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Black" Padding="5" Margin="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="La récompense '" Grid.Column="0" VerticalOptions="Center"/>
+                            <Label Text="{Binding NomRecompense} " Grid.Column="1" VerticalOptions="Center"/>
+                            <Label Text="' s'obtient avec un montant de points nécéssaire de (" Grid.Column="2" VerticalOptions="Center"/>
+                            <Label Text="{Binding PointsNecessaires}" Grid.Column="3" VerticalOptions="Center"/>
+                            <Label Text=")" Grid.Column="4" VerticalOptions="Center"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

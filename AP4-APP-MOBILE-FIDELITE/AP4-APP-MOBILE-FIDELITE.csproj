@@ -77,6 +77,9 @@
 	  <Compile Update="Vues\Create\Registration.xaml.cs">
 	    <DependentUpon>Registration.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Vues\GetAllRecompenses.xaml.cs">
+	    <DependentUpon>GetAllRecompenses.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Vues\HomePage.xaml.cs">
 	    <DependentUpon>HomePage.xaml</DependentUpon>
 	  </Compile>
@@ -114,6 +117,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vues\Create\Registration.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vues\GetAllRecompenses.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vues\GetAll\GetAllCommandes.xaml">

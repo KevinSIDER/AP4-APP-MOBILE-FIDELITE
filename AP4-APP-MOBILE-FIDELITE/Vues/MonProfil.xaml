@@ -7,11 +7,12 @@
         <Label x:Name="UserInfoLabel"
                Text="Nom et Prénom"
                FontSize="25"
+               Margin="0, 30, 0, 20"
                TextColor="Black"
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
-        <Button Text="Mes commandes" 
+        <Button Text="Voir mes commandes" 
                 Clicked="goShowCommandes"
                 WidthRequest="260"
                 BackgroundColor="#089" />

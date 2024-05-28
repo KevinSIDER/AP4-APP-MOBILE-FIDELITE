@@ -25,7 +25,7 @@ public partial class MonProfil : ContentPage
         UserInfoLabel.Text = $"Nom : {nom}\n" +
                              $"Prénom : {prenom}\n" +
                              $"Email : {email}\n" +
-                             $"Points de fidélité : {ptnFidelite}\n" +
+                             $"Points de pismafidélité : {ptnFidelite}\n" +
                              $"Téléphone : {telephone}\n" +
                              $"Date de naissance : {dateNaissance:dd/MM/yyyy}";
     }
