@@ -16,13 +16,8 @@ public partial class CreateCommanderVue : ContentPage
     private async void OnCreateCommander(object sender, EventArgs e)
     {
         Commander commanderData = new Commander();
-
-        string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-        JObject currentUserJson = JObject.Parse(currentUserJsonString);
-        int id = (int)currentUserJson["id"];
-
-        commanderData.Id = id;
-        commanderData.UserID = id;
+        commanderData.Id = Constantes.CurrentUser.Id;
+        commanderData.UserID = Constantes.CurrentUser.Id;
         commanderData.Quantite = int.Parse(QuantiteEntry.Text);
         commanderData.LeProduit = int.Parse(LeProduitEntry.Text);
         commanderData.LaCommande = int.Parse(LaCommandeEntry.Text);

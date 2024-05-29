@@ -16,11 +16,7 @@ public partial class CreateCommandeVue : ContentPage
     private async void OnCreateCommande(object sender, EventArgs e)
     {
         Commande commandeData = new Commande();
-
-        string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-        JObject currentUserJson = JObject.Parse(currentUserJsonString);
-        int id = (int)currentUserJson["id"];
-        commandeData.ID = id;
+        commandeData.ID = Constantes.CurrentUser.Id;
         commandeData.Etat = "En cours";
 
         var result = await _apiServices.GetOneAsync("api/mobile/creerCommande", commandeData);

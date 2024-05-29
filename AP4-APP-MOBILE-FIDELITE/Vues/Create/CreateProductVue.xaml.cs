@@ -17,12 +17,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         private async void OnCreateProduct(object sender, EventArgs e)
         {
             Product productData = new Product();
-
-            string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-            JObject currentUserJson = JObject.Parse(currentUserJsonString);
-            int id = (int)currentUserJson["id"];
-
-            productData.ID = id;
+            productData.ID = Constantes.CurrentUser.Id;
             productData.NomProduit = NomProduitEntry.Text;
             productData.PrixProduit = double.Parse(PrixProduitEntry.Text);
             productData.PointsFidelite = int.Parse(PointsFideliteEntry.Text);

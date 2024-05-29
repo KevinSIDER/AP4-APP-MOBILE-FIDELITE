@@ -17,12 +17,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         private async void OnCreateReward(object sender, EventArgs e)
         {
             Reward rewardData = new Reward();
-
-            string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-            JObject currentUserJson = JObject.Parse(currentUserJsonString);
-            int id = (int)currentUserJson["id"];
-
-            rewardData.ID = id;
+            rewardData.ID = Constantes.CurrentUser.Id;
             rewardData.NomRecompense = NomRecompense.Text;
             rewardData.PointsNecessaires = int.Parse(PointsNecessaires.Text);
             rewardData.LeProduit = int.Parse(LeProduit.Text);

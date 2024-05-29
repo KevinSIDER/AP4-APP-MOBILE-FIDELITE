@@ -60,6 +60,11 @@
                     Clicked="GoShowAllRewards"
                     WidthRequest="290"
                     BackgroundColor="#089" />
+            
+            <Button Text="Vérifier la présence de doublon de récompense" 
+                    Clicked="GoShowDoublonReward"
+                    WidthRequest="290"
+                    BackgroundColor="#089" /> 
 
             <Button Text="Commander un Pismaproduit" 
                     Clicked="GoCreateCommander"

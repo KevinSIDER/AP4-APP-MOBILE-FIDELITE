@@ -21,11 +21,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         {
             try
             {
-                string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-                JObject currentUserJson = JObject.Parse(currentUserJsonString);
-                int id = (int)currentUserJson["id"];
-
-                var result = await _apiServices.GetAllAsyncByID<Product>("api/mobile/GetAllProduits", "Id", id);
+                var result = await _apiServices.GetAllAsyncByID<Product>("api/mobile/GetAllProduits", "Id", Constantes.CurrentUser.Id);
                 MesProduits.ItemsSource = result;
             }
             catch (Exception ex)

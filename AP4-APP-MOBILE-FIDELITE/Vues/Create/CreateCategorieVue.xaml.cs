@@ -17,12 +17,7 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
         private async void OnCreateCategorie(object sender, EventArgs e)
         {
             Categorie categorieData = new Categorie();
-
-            string currentUserJsonString = JsonConvert.SerializeObject(Constantes.CurrentUser);
-            JObject currentUserJson = JObject.Parse(currentUserJsonString);
-            int id = (int)currentUserJson["id"];
-
-            categorieData.ID = id;
+            categorieData.ID = Constantes.CurrentUser.Id;
             categorieData.nomCategorie = NomCategorieEntry.Text;
             categorieData.urlImage = ImageUrlEntry.Text;
 

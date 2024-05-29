@@ -58,5 +58,10 @@ namespace AP4_APP_MOBILE_FIDELITE.Vues
             await Navigation.PushAsync(new GetAllRecompensesVue());
         }
 
+        private async void GoShowDoublonReward(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DoublonRewardVue());
+        }
+
     }
 }
